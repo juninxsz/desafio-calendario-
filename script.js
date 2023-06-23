@@ -1,17 +1,17 @@
-// month abbreviations
+// abreviaçãooes
 const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-// get current date values
+// 
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth();
 const currentDay = currentDate.getDate();
 
-// set month and year
+// 
 document.querySelector('.calendar__month').innerText = months[currentDate.getMonth()];
 document.querySelector('.calendar__year').innerText = currentYear;
 
-// create grid of days
+// 
 let daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 let week = document.createElement('div');
 week.classList.add('calendar__day-numbers-row');
